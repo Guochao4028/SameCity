@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="KGk-i7-Jjw" customClass="PublishMiddleCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAy-cV-Rgx">
+                        <rect key="frame" x="16" y="59.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5cI-yT-3Yz">
+                        <rect key="frame" x="16" y="29" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="1az-MB-c4b"/>
+                            <constraint firstAttribute="width" constant="80" id="VpG-0b-Zha"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-Zn-MAN">
+                        <rect key="frame" x="268" y="11" width="36" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Gia-hh-FdG"/>
+                            <constraint firstAttribute="width" constant="36" id="Uj6-zJ-7IH"/>
+                        </constraints>
+                        <state key="normal" image="cloose"/>
+                        <connections>
+                            <action selector="clooseButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yfk-5S-9SL"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="s4C-Zn-MAN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KGS-sr-sZx"/>
+                    <constraint firstItem="zAy-cV-Rgx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="P1J-CW-eZz"/>
+                    <constraint firstItem="zAy-cV-Rgx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Sfx-eY-5F1"/>
+                    <constraint firstItem="5cI-yT-3Yz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TBi-v9-QQ0"/>
+                    <constraint firstItem="s4C-Zn-MAN" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="XNh-eB-AJ8"/>
+                    <constraint firstItem="5cI-yT-3Yz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="hip-hA-bz1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="clooseButton" destination="s4C-Zn-MAN" id="cUf-1I-QGG"/>
+                <outlet property="picImageView" destination="5cI-yT-3Yz" id="dFU-T3-747"/>
+                <outlet property="wordLabel" destination="zAy-cV-Rgx" id="1na-LD-o2P"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="100"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cloose" width="71" height="69"/>
+    </resources>
+</document>
